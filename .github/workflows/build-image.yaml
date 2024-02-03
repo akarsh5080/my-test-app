@@ -46,7 +46,7 @@ jobs:
           docker push $IMAGE:$IMAGE_VERSION
       - name: Update chart
         run: |
-          sed -i "12s/.*/tag: $IMAGE_VERSION/" deploy/values.yaml
+          sed -i "12s/.*/  tag: $IMAGE_VERSION/" deploy/values.yaml
           git config --local user.name "akarsh5080"
           git add deploy/values.yaml
           git commit -m "helmchart-version-change"
