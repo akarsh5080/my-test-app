@@ -47,7 +47,8 @@ jobs:
       - name: Update chart
         run: |
           sed -i "12s/.*/  tag: $IMAGE_VERSION/" deploy/values.yaml
-          git config --local user.name "akarsh5080"
+          git config --global user.name "akarsh5080"
+          git config --global user.email "akarsh5080@gmail.com"
           git add deploy/values.yaml
           git commit -m "helmchart-version-change"
       - name: push changed to helm 
