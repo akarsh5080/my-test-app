@@ -24,7 +24,7 @@ jobs:
       - name: Build image and version variables
         run: |
           echo "IMAGE=$CONTAINER_REGISTRY/$CONTAINER_IMAGE" >> $GITHUB_ENV
-          echo "echo "Short SHA: ${GITHUB_SHA::7}" >> $GITHUB_ENV
+          echo "Short SHA: ${GITHUB_SHA::7}" >> $GITHUB_ENV
       
 
       - name: Build image
